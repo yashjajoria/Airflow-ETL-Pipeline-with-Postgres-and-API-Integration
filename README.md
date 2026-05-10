@@ -50,7 +50,7 @@ This project is ideal for those looking to learn practical data engineering, wor
 ```mermaid
 flowchart TD
     A[NASA APOD API] -- Extract --> B[Airflow SimpleHttpOperator]
-    B -- Raw JSON --> C[Airflow TaskFlow Python Operator (Transform)]
+    B -- Raw JSON --> C[Airflow TaskFlow Python Operator Transform]
     C -- Insert data --> D[Airflow PostgresHook]
     D -- Upsert data --> E[PostgreSQL Database]
     F[Airflow DAG Scheduler] -- Orchestrates --> B
